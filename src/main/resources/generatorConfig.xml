@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+    <context id="Mysql" targetRuntime="MyBatis3">
+        <jdbcConnection driverClass="com.mysql.cj.jdbc.Driver"
+                        connectionURL="jdbc:mysql://localhost:3306/test?useSSL=false&amp;serverTimezone=UTC"
+                        userId="ypj"
+                        password="123456">
+        </jdbcConnection>
+
+        <javaModelGenerator targetPackage="cn.ypj.wowsrankbackend.model" targetProject="src/main/java/cn/ypj/wowsrankbackend/model" />
+
+        <sqlMapGenerator targetPackage="com" targetProject="src/main/resources/mapper" />
+
+        <javaClientGenerator type="XMLMAPPER" targetPackage="cn.ypj.wowsrankbackend.dao" targetProject="src/main/java/cn/ypj/wowsrankbackend/dao" />
+
+        <table schema="test" tableName="USER_INFO" domainObjectName="UserInfo" />
+    </context>
+</generatorConfiguration>
